@@ -1,0 +1,26 @@
+[package]
+name = "usbkill"
+version = "0.1.0"
+edition = "2021"
+description = "Anti-forensic kill-switch: locks or powers off the machine the instant USB devices change. A modern Rust rewrite of hephaest0s/usbkill."
+license = "GPL-3.0-or-later"
+repository = "https://github.com/cloudsculptinglabs/usbkill-rs"
+readme = "README.md"
+keywords = ["security", "anti-forensic", "usb", "kill-switch", "privacy"]
+categories = ["command-line-utilities"]
+
+[[bin]]
+name = "usbkill"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+rust-ini = "0.21"
+log = "0.4"
+env_logger = "0.11"
+nusb = "0.1"
+
+[profile.release]
+lto = true
+strip = true
+opt-level = "z"
