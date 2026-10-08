@@ -5,11 +5,6 @@ instant a device is plugged in or removed while armed, runs a configured
 response — by default an immediate shutdown — so an encrypted, unattended
 laptop protects itself against physical tampering or seizure.
 
-A modern Rust rewrite of [hephaest0s/usbkill](https://github.com/hephaest0s/usbkill)
-(Python, GPLv3). Same idea, rebuilt as a single static binary: no interpreter,
-no dependency install on the target, cross-platform USB enumeration, and a
-`--dry-run` mode so you can arm it safely before trusting it.
-
 > **Scope & ethics.** usbkill only acts on the machine it runs on, under your
 > own configuration. It is a data-protection tool for hardware you own or are
 > authorized to protect. It is **not** designed to affect any other system.
